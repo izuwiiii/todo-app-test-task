@@ -21,14 +21,14 @@ npm install
 Start the frontend:
 
 ```bash
-npm start
+npm run dev
 ```
 
 In new terminal
 Start the backend server:
 
 ```bash
-npm server
+npm run server
 ```
 
 The app will be available at http://localhost:5173
