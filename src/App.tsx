@@ -1,13 +1,8 @@
 import "./App.css";
-import { useApi } from "./hooks/useApi";
-
-const { getTodo, createTodo } = useApi();
+import { TodoPage } from "./components/TodoPage";
 
 function App() {
-  getTodo();
-  createTodo();
-  getTodo();
-  return <h1>Hello</h1>;
+  return <TodoPage />;
 }
 
 export default App;
