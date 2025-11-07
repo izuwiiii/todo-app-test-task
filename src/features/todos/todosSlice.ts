@@ -5,6 +5,8 @@ import {
 } from "@reduxjs/toolkit";
 import type { Todo } from "../../types/ITodo";
 
+const BASE_URL = "http://localhost:3000";
+
 interface TodosState {
   items: Todo[];
   loading: boolean;
@@ -18,12 +20,12 @@ const initialState: TodosState = {
 };
 
 export const fetchTodos = createAsyncThunk("todos/fetch", async () => {
-  const res = await fetch("http://localhost:3000/todos");
+  const res = await fetch(`${BASE_URL}/todos`);
   return (await res.json()) as Todo[];
 });
 
 export const addTodo = createAsyncThunk("todos/add", async (title: string) => {
-  const res = await fetch("http://localhost:3000/todos", {
+  const res = await fetch(`${BASE_URL}/todos`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, completed: false }),
@@ -42,7 +44,7 @@ export const updateTodo = createAsyncThunk(
     title?: string;
     completed?: boolean;
   }) => {
-    const res = await fetch(`http://localhost:3000/todos/${id}`, {
+    const res = await fetch(`${BASE_URL}/todos/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
@@ -58,7 +60,7 @@ export const updateTodo = createAsyncThunk(
 export const deleteTodo = createAsyncThunk(
   "todos/delete",
   async (id: string) => {
-    await fetch(`http://localhost:3000/todos/${id}`, {
+    await fetch(`${BASE_URL}/todos/${id}`, {
       method: "DELETE",
     });
     return id;

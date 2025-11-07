@@ -1,4 +1,24 @@
-## 📦 Project Setup
+## Overview
+
+This project is a simple Todo App built with React as part of a test task.
+It demonstrates core frontend development skills such as API integration, CRUD operations, pagination, and state management using Redux Toolkit.
+The app features a clean custom design, dynamic task updates, and responsive layout.
+
+Key Features:
+
+- Fetching todos from JSONPlaceholder API
+
+- Full CRUD functionality (create, edit, delete, toggle complete)
+
+- Pagination for task navigation
+
+- State management via Redux Toolkit
+
+- Responsive UI built with Tailwind CSS
+
+- Ready to run locally with a simple setup
+
+## Project Setup
 
 Clone the repository:
 
