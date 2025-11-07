@@ -2,7 +2,7 @@
 
 This project is a simple Todo App built with React as part of a test task.
 It demonstrates core frontend development skills such as API integration, CRUD operations, pagination, and state management using Redux Toolkit.
-The app features a clean custom design, dynamic task updates, and responsive layout.
+The app features a clean custom design and dynamic task updates.
 
 Key Features:
 
